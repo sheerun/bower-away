@@ -1,4 +1,4 @@
-# babel2yarn
+# bower2yarn
 
 Convert project from using [Bower](https://bower.io/) to using [Yarn](https://yarnpkg.com)
 
