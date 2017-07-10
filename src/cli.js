@@ -89,7 +89,7 @@ async function main () {
       "At the end you should be able to confirm Yarn's version with:",
       '$ yarn --version',
       '',
-      'PLEASE NOTE THAT MINIMUM SUPPORTED VERSION OF YARN IS 0.27.3'
+      'PLEASE NOTE THAT MINIMUM SUPPORTED VERSION OF YARN IS 0.28.1'
     ])
   }
 
