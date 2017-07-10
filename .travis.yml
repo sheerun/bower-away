@@ -1,0 +1,26 @@
+language: node_js
+
+node_js:
+  - '4'
+  - '6'
+
+install:
+  - node --version
+  - npm --version
+  - npm install
+
+os:
+  - osx
+  - linux
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - os: osx
+
+script:
+  - npm test
+
+cache:
+  directories:
+    - node_modules
