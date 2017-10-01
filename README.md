@@ -1,7 +1,6 @@
-# bower2yarn
+# babel2yarn [![Modern Node](https://img.shields.io/badge/modern-node-9BB48F.svg)](https://github.com/sheerun/modern-node)
 
-Convert project from using [Bower](https://bower.io/) to using [Yarn](https://yarnpkg.com)
-
+Convert your project from [Bower](https://bower.io/) to [Yarn](https://yarnpkg.com).
 
 ## Usage
 

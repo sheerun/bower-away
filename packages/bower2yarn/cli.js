@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-import meow from 'meow'
-import bowerConfig from 'bower-config'
-import which from 'which'
-import chalk from 'chalk'
-import path from 'path'
-import fs from 'fs'
-import { startsWith } from 'lodash'
+const meow = require('meow')
+const bowerConfig = require('bower-config')
+const which = require('which')
+const chalk = require('chalk')
+const path = require('path')
+const fs = require('fs')
+const { startsWith } = require('lodash')
+const execa = require('execa')
 
 const cli = meow(
   `
@@ -40,7 +41,9 @@ function step (lines, last = false) {
 
   if (!last) {
     console.log()
-    console.log(chalk.gray('Please call this command once more when done...'))
+    console.log(
+      chalk.gray("Please call bower2yarn once more when you're done with this!")
+    )
   }
 
   console.log()
@@ -49,22 +52,49 @@ function step (lines, last = false) {
 }
 
 function exists (bin) {
+  var path
+
   try {
-    which.sync(bin)
+    path = which.sync(bin)
   } catch (e) {
     return false
   }
 
-  return true
+  return path
 }
 
 async function main () {
   const cwd = process.cwd()
 
-  task('Install Bower')
+  task('Install Yarn')
 
-  if (!exists('bower', cwd)) {
+  const yarnPath = exists('yarn', cwd)
+
+  if (!yarnPath) {
     step([
+      'A good first step to migrate to Yarn is installing it!',
+      '',
+      'Please choose your preferred method:',
+      'https://yarnpkg.com/lang/en/docs/install/',
+      '',
+      'One good way to install it is:',
+      '$ npm install -g yarn',
+      '',
+      "At the end you should be able to confirm Yarn's version with:",
+      '$ yarn --version',
+      '',
+      'THE MINIMUM SUPPORTED VERSION OF YARN IS 1.0.0!'
+    ])
+  }
+
+  task('Install Bower with Yarn')
+
+  const bowerPath = exists('bower')
+
+  if (!bowerPath) {
+    step([
+      'We cannot drop Bower just yet, we need it to install legacy dependencies.',
+      '',
       'As a first step, please install Bower with:',
       '$ npm install -g bower',
       '',
@@ -73,23 +103,6 @@ async function main () {
       '',
       "At the end you should be able to confirm Bower's version with:",
       '$ bower --version'
-    ])
-  }
-
-  task('Install Yarn')
-
-  if (!exists('yarn', cwd)) {
-    step([
-      'Now, please install Yarn used your preferred method:',
-      'https://yarnpkg.com/lang/en/docs/install/',
-      '',
-      'One totally valid way is:',
-      '$ npm install -g yarn@>=0.27.3',
-      '',
-      "At the end you should be able to confirm Yarn's version with:",
-      '$ yarn --version',
-      '',
-      'PLEASE NOTE THAT MINIMUM SUPPORTED VERSION OF YARN IS 0.28.1'
     ])
   }
 
