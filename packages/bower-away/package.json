@@ -1,9 +1,10 @@
 {
-  "name": "bower2yarn",
+  "name": "bower-away",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "index.js",
   "bin": "cli.js",
+  "author": "Adam Stankiewicz <sheerun@sher.pl>",
+  "description": "Tool for migrating away from Bower (to Yarn)",
   "dependencies": {
     "bower-config": "^1.4.0",
     "bower-json": "^0.8.1",

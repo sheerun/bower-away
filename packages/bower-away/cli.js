@@ -19,7 +19,7 @@ updateNotifier({ pkg }).notify()
 const cli = meow(
   `
   Usage
-    $ bower2yarn
+    $ bower-away
 
   Please call this command for next step to convert your project to Yarn
   `
@@ -40,7 +40,7 @@ function step (title, lines, last = false) {
   if (!last) {
     console.error()
     console.error(
-      chalk.red("Please call bower2yarn once more when you're done with this!")
+      chalk.red("Please call bower-away once more when you're done with this!")
     )
   }
 
@@ -197,11 +197,11 @@ async function main () {
         step('Update package.json', [
           'Changes need to be made in package.json. Please run following to preview them:',
           '',
-          '$ bower2yarn --diff',
+          '$ bower-away --diff',
           '',
           'And then apply them by running:',
           '',
-          '$ bower2yarn --apply'
+          '$ bower-away --apply'
         ])
       }
     }

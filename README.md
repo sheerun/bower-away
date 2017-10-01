@@ -5,9 +5,8 @@ Convert your project from [Bower](https://bower.io/) to [Yarn](https://yarnpkg.c
 ## Usage
 
 ```
-npm install -g bower2yarn
-cd my_project
-bower2yarn # listen and repeat!
+npm install -g bower-away
+bower-away # listen and repeat!
 ```
 
 ## License
