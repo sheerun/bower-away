@@ -2,7 +2,7 @@
   "private": true,
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-node-module": "^2.0.5",
+    "babel-preset-env": "^1.6.0",
     "babel-runtime": "^6",
     "husky": "^0.14.3",
     "jest-cli": "^21.2.0",
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "format": "prettier-standard 'packages/**/*.js'",
-    "build": "rm -rf dist && babel packages --out-dir dist --ignore node_modules --copy-files",
+    "build": "git diff-index --quiet HEAD -- && babel packages --out-dir packages --ignore node_modules || echo Unclean work dir",
     "test": "jest",
     "precommit": "lint-staged"
   },
