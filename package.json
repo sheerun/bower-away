@@ -3,7 +3,6 @@
   "devDependencies": {
     "babel-cli": "7.0.0-beta.2",
     "babel-preset-env": "2.0.0-beta.2",
-    "babel-runtime": "^6",
     "husky": "^0.14.3",
     "jest-cli": "^21.2.0",
     "lint-staged": "^4.2.3",
