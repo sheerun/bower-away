@@ -1,8 +1,8 @@
 {
   "private": true,
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
+    "babel-cli": "7.0.0-beta.2",
+    "babel-preset-env": "2.0.0-beta.2",
     "babel-runtime": "^6",
     "husky": "^0.14.3",
     "jest-cli": "^21.2.0",
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "format": "prettier-standard 'packages/**/*.js'",
-    "build": "babel packages --out-dir packages --ignore node_modules",
+    "build": "babel packages --out-dir packages --ignore '**/node_modules'",
     "test": "jest",
     "precommit": "lint-staged"
   },
