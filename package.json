@@ -11,7 +11,7 @@
   },
   "scripts": {
     "format": "prettier-standard 'packages/**/*.js'",
-    "build": "git diff-index --quiet HEAD -- && babel packages --out-dir packages --ignore node_modules || echo Unclean work dir",
+    "build": "babel packages --out-dir packages --ignore node_modules",
     "test": "jest",
     "precommit": "lint-staged"
   },
