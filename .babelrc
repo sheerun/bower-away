@@ -2,7 +2,7 @@
   "presets": [
     ["env", {
       "target": {
-        "node": "0.12"
+        "node": "4"
       },
       "useBuiltIns": "usage"
     }]

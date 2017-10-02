@@ -1,6 +1,6 @@
 {
   "name": "bower-away",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "license": "MIT",
   "bin": "cli.js",
   "author": "Adam Stankiewicz <sheerun@sher.pl>",
@@ -18,5 +18,8 @@
     "meow": "^3.7.0",
     "update-notifier": "^2.2.0",
     "which": "^1.2.14"
+  },
+  "engines": {
+    "node": ">= 4"
   }
 }
