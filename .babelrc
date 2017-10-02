@@ -1,5 +1,9 @@
 {
   "presets": [
-    ["node-module"]
+    ["env", {
+      "target": {
+        "node": "4"
+      }
+    }]
   ]
 }
