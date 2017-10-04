@@ -5,7 +5,7 @@ Convert your project from [Bower](https://bower.io/) to [Yarn](https://yarnpkg.c
 ## Usage
 
 ```
-npm install -g bower-away
+yarn global add bower-away
 bower-away # listen and repeat!
 ```
 
