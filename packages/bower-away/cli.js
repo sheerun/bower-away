@@ -245,6 +245,16 @@ async function main () {
             '',
             '$ bower-away --apply'
           ])
+        } else {
+          step('Update package.json', [
+            'You need to create package.json. You can preview it by running:',
+            '',
+            '$ bower-away --diff',
+            '',
+            'And then apply them by running:',
+            '',
+            '$ bower-away --apply'
+          ])
         }
       }
     }

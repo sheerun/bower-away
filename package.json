@@ -35,6 +35,6 @@
     ]
   },
   "workspaces": [
-    "packages/*"
+    "packages/bower-away"
   ]
 }
