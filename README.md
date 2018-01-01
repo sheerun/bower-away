@@ -1,6 +1,6 @@
 # bower-away [![Modern Node](https://img.shields.io/badge/modern-node-9BB48F.svg)](https://github.com/sheerun/modern-node)
 
-Convert your project from [Bower](https://bower.io/) to [Yarn](https://yarnpkg.com).
+Convert your project from [Bower](https://bower.io/) to [Yarn](https://yarnpkg.com). Read about how it works at [Bower blog](https://bower.io/blog/2017/how-to-migrate-away-from-bower/).
 
 ## Usage
 
